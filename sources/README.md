@@ -12,7 +12,7 @@ Importação local em 22 de setembro de 2026, a partir dos repositórios vizinho
 
 As duas animações têm 60 quadros e resolução de 1000 × 800. Os arquivos `routes-poster.png` e `routes2-poster.png` são conversões do primeiro quadro de cada GIF, usadas antes da reprodução e na impressão. Os GIFs e as quatro figuras foram copiados sem alteração. O recorte dos painéis superiores de Pareto é feito apenas na exibição via CSS, como no LaTeX.
 
-O diagrama TikZ de fluxo foi reconstruído como SVG acessível no slide 10. As aberturas de seção foram mantidas. O encerramento original precede os dois slides adicionais de demonstração.
+O diagrama TikZ de fluxo foi reconstruído como SVG acessível no slide 10. As aberturas de seção foram mantidas. A demonstração do alcance dos nós móveis ocupa o slide 16, após a instância experimental. A demonstração do alcance dos nós fixos permanece ao final, no slide 24.
 
 As notas e os números foram transcritos do material de origem. Os experimentos não foram reexecutados. Os GIFs ilustram o exemplo mobile do MILP; não representam pacotes simulados no Cooja nem comprovam, por si só, os resultados operacionais do artigo.
 

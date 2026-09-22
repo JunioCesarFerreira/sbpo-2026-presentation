@@ -68,23 +68,23 @@ test('navegação, links diretos, índice e notas isolam os atalhos', async ({ p
 
 test('GIFs iniciam sob demanda, pausam e respeitam movimento reduzido', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
-  await page.goto('/#/23');
-  const slide = page.locator('#slide-23');
+  await page.goto('/#/24');
+  const slide = page.locator('#slide-24');
   const img = slide.locator('img');
   await expect(img).toHaveAttribute('src', /-poster\.png$/);
   await slide.getByRole('button', { name: 'Reproduzir animação desde o início' }).click();
   await expect(img).toHaveAttribute('src', /routes\.gif$/);
-  await page.waitForFunction(() => document.querySelector('#slide-23 img').complete);
+  await page.waitForFunction(() => document.querySelector('#slide-24 img').complete);
   await slide.getByRole('button', { name: 'Pausar animação' }).click();
   await expect(slide.locator('canvas')).toBeVisible();
   await expect(img).toHaveAttribute('src', /-poster\.png$/);
   await slide.getByRole('button', { name: 'Reiniciar' }).click();
   await expect(slide.locator('canvas')).not.toBeVisible();
-  await page.keyboard.press('ArrowRight');
+  await page.goto('/#/16');
   await expect(img).toHaveAttribute('src', /-poster\.png$/);
-  await expect(page.locator('#slide-24 img')).toHaveAttribute('src', /-poster\.png$/);
+  await expect(page.locator('#slide-16 img')).toHaveAttribute('src', /routes2-poster\.png$/);
   await page.emulateMedia({ reducedMotion: 'no-preference' });
-  await page.keyboard.press('ArrowLeft');
+  await page.goto('/#/24');
   await expect(img).toHaveAttribute('src', /routes\.gif$/);
 });
 
@@ -108,17 +108,17 @@ test('recursos funcionam sob o caminho de projeto do GitHub Pages', async ({ pag
 test('a pasta gerada abre offline e mantém os slides na impressão', async ({ page, context }) => {
   await context.setOffline(true);
   const entry = pathToFileURL(fileURLToPath(new URL('../dist/index.html', import.meta.url)));
-  await page.goto(`${entry.href}#/23`);
+  await page.goto(`${entry.href}#/16`);
   await expect(page.locator('.katex')).toHaveCount(45);
-  await expect(page.locator('#counter')).toHaveText('23 / 24');
-  await page.waitForFunction(() => document.querySelector('#slide-23 img').naturalWidth > 0);
+  await expect(page.locator('#counter')).toHaveText('16 / 24');
+  await page.waitForFunction(() => document.querySelector('#slide-16 img').naturalWidth > 0);
   await page.emulateMedia({ media: 'print' });
   await expect(page.locator('.slide:visible')).toHaveCount(24);
   await expect(page.locator('.toolbar')).not.toBeVisible();
 });
 
 test('layout cabe em telas pequenas e em projetor 16:9', async ({ page }) => {
-  await page.goto('/#/23');
+  await page.goto('/#/16');
   for (const viewport of [{ width: 390, height: 844 }, { width: 844, height: 390 }, { width: 1920, height: 1080 }]) {
     await page.setViewportSize(viewport);
     await expect.poll(() => page.locator('#deck').evaluate((deck) => {
