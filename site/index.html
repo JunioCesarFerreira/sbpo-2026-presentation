@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102f43">
+  <meta name="description" content="Planejamento Discreto de Redes de Sensores com Nós Móveis via Programação Inteira Mista e Avaliação por Simulação — Junio Cesar Ferreira, SBPO 2026.">
+  <title>SBPO 2026 · Redes de sensores com nós móveis</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="assets/vendor/katex/katex.min.js"></script>
+  <script defer src="assets/vendor/katex/contrib/auto-render.min.js"></script>
+  <script defer src="slides.js"></script>
+  <script defer src="presentation.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#stage">Ir para o slide</a>
+  <header class="toolbar">
+    <a class="brand" href="#/1" aria-label="Voltar à capa"><span class="brand-mark" aria-hidden="true">S</span> SBPO <span>2026</span></a>
+    <span class="toolbar-title">Planejamento de redes de sensores</span>
+    <nav aria-label="Ferramentas da apresentação">
+      <button id="overview-button" title="Índice de slides (O)" aria-haspopup="dialog">Índice <kbd>O</kbd></button>
+      <button id="notes-button" title="Notas de fala (N)" aria-haspopup="dialog">Notas <kbd>N</kbd></button>
+      <button id="fullscreen-button" title="Tela cheia (F)">Tela cheia <kbd>F</kbd></button>
+      <button id="help-button" aria-label="Ajuda e atalhos" aria-haspopup="dialog">?</button>
+    </nav>
+  </header>
+  <main id="stage" tabindex="-1" aria-label="Apresentação de slides">
+    <div id="deck"></div>
+    <noscript>Ative o JavaScript para navegar nesta apresentação.</noscript>
+  </main>
+  <footer class="navigation">
+    <span id="section-label">SBPO 2026</span>
+    <div class="slide-controls">
+      <button id="previous-button" aria-label="Slide anterior" title="Slide anterior (←)">←</button>
+      <span id="counter" aria-live="polite" aria-atomic="true">1 / 24</span>
+      <button id="next-button" aria-label="Próximo slide" title="Próximo slide (→)">→</button>
+    </div>
+    <span class="keyboard-hint">Use <kbd>←</kbd> <kbd>→</kbd> para navegar</span>
+    <div id="progress" role="progressbar" aria-label="Progresso da apresentação" aria-valuemin="1"><span></span></div>
+  </footer>
+  <dialog id="overview-dialog" aria-labelledby="overview-title">
+    <div class="dialog-heading"><div><span class="eyebrow">APRESENTAÇÃO</span><h2 id="overview-title">Índice de slides</h2></div><button data-close aria-label="Fechar índice">×</button></div>
+    <div id="overview-list"></div>
+  </dialog>
+  <dialog id="notes-dialog" aria-labelledby="notes-title">
+    <div class="dialog-heading"><h2 id="notes-title">Notas de fala</h2><button data-close aria-label="Fechar notas">×</button></div>
+    <p class="notes-warning">Estas notas aparecem nesta tela. Feche antes de projetar.</p>
+    <h3 id="notes-slide-title"></h3><p id="notes-text"></p>
+  </dialog>
+  <dialog id="help-dialog" aria-labelledby="help-title">
+    <div class="dialog-heading"><h2 id="help-title">Apresente no seu ritmo</h2><button data-close aria-label="Fechar ajuda">×</button></div>
+    <dl class="shortcuts">
+      <dt><kbd>→</kbd> <kbd>↓</kbd> <kbd>Espaço</kbd> <kbd>Page Down</kbd></dt><dd>Próximo slide</dd>
+      <dt><kbd>←</kbd> <kbd>↑</kbd> <kbd>Page Up</kbd></dt><dd>Slide anterior</dd>
+      <dt><kbd>Home</kbd> / <kbd>End</kbd></dt><dd>Primeiro / último slide</dd>
+      <dt><kbd>F</kbd></dt><dd>Entrar ou sair da tela cheia</dd>
+      <dt><kbd>O</kbd> / <kbd>N</kbd></dt><dd>Abrir índice / notas de fala</dd>
+      <dt><kbd>Esc</kbd></dt><dd>Fechar janela aberta</dd>
+    </dl>
+    <p>No celular, deslize para os lados. Nas demonstrações, use os controles para pausar, continuar ou reiniciar o GIF.</p>
+    <button id="print-button">Imprimir / salvar em PDF</button>
+  </dialog>
+  <p id="status" class="sr-only" role="status"></p>
+</body>
+</html>

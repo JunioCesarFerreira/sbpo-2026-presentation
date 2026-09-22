@@ -1,0 +1,18 @@
+{
+  "name": "sbpo-2026-presentation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Apresentação SBPO 2026 — planejamento de redes de sensores com nós móveis",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "katex": "0.16.22"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
