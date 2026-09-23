@@ -95,7 +95,7 @@ window.SLIDES = (() => {
     },
     {
       title: 'Obrigado!', section: 'Encerramento', className: 'closing',
-      content: html`<h2>Obrigado!</h2><p>Junio Cesar Ferreira<br><a href="mailto:juniocesarferreira@usp.br">juniocesarferreira@usp.br</a></p><p class="funding"><strong>Agradecimentos</strong><br>FAPESP · processos 2020/09770-7 e 2021/06968-3<br>CNPq · processo 444791/2024-8 — Conhecimento Brasil</p><p class="small" style="color:#70d7bf">A seguir: demonstração das rotas de comunicação →</p>`
+      content: html`<h2>Obrigado!</h2><p>Junio Cesar Ferreira<br><a href="mailto:juniocesarferreira@usp.br">juniocesarferreira@usp.br</a></p><p class="funding"><strong>Agradecimentos</strong><br>FAPESP · processos 2020/09770-7 e 2021/06968-3<br>CNPq · processo 444791/2024-8 — Conhecimento Brasil</p>`
     },
   ];
 })();
