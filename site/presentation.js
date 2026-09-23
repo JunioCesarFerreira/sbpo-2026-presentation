@@ -167,8 +167,6 @@
   $('.skip-link').addEventListener('click', (event) => { event.preventDefault(); $('#stage').focus(); });
   $('#next-button').addEventListener('click', () => goTo(current + 1));
   $('#overview-button').addEventListener('click', () => openDialog('#overview-dialog'));
-  $('#notes-button').addEventListener('click', () => openDialog('#notes-dialog'));
-  $('#help-button').addEventListener('click', () => openDialog('#help-dialog'));
   $('#fullscreen-button').addEventListener('click', toggleFullscreen);
   $('#print-button').addEventListener('click', () => { $('#help-dialog').close(); window.print(); });
   dialogs.forEach((dialog) => {
