@@ -35,9 +35,19 @@ window.SLIDES = (() => {
     },
     section('02', 'Definição do problema', 'Uma infraestrutura fixa para trajetórias conhecidas.'),
     {
-      title: 'Descrição do problema', section: 'Problema',
-      content: html`<div class="two-col wide-figure"><div class="stack"><p>Sensores em tratores, robôs e veículos de apoio precisam enviar seus dados a um ponto de coleta: o <strong>sink</strong>.</p><div class="callout"><p>Determinar posições de nós fixos que garantam comunicação <strong>multi-hop</strong> ao longo das trajetórias dos móveis, otimizando métricas de desempenho.</p></div></div><figure class="figure agriculture"><img src="assets/img/cenario-agricola.png" alt="Cenário agrícola com dispositivos móveis, posições candidatas, nós fixos instalados e um sink."><figcaption>Motivação agrícola · ilustração do artigo</figcaption></figure></div>`,
-      notes: 'Tempo: 70 segundos. Identifique os móveis, as posições candidatas, os nós instalados e o sink. O alcance limitado exige retransmissão entre nós. As posições dos móveis mudam, mas a infraestrutura instalada permanece. A figura representa a motivação agrícola; o experimento realizado é geométrico e controlado, não uma implantação em campo.'
+      title: 'Conectividade para dispositivos em movimento', section: 'Problema',
+      content: html`<div class="two-col problem-layout">
+        <div class="problem-copy">
+          <p><strong>Sensores em movimento</strong> precisam enviar dados a um ponto de coleta: o <strong>sink</strong>.</p>
+          <p class="small muted">Robôs, veículos e dispositivos vestíveis são exemplos desse cenário.</p>
+          <div class="callout"><h3>Onde instalar os nós fixos?</h3><p>Selecionar posições que viabilizem caminhos <strong>multi-hop</strong> ao longo das trajetórias, considerando a capacidade dos enlaces e o custo de instalação.</p></div>
+        </div>
+        <figure class="figure mobile-network">
+          <img src="assets/img/rede-sensores-moveis.png" alt="Ilustração conceitual de um robô, um veículo e uma pessoa com sensor vestível em movimento. Enlaces em verde-azulado encaminham dados por nós fixos até um sink azul-escuro. Trajetórias aparecem em tracejado âmbar; quadrados vazios indicam posições candidatas.">
+          <figcaption><div class="network-key"><span><i class="data-link" aria-hidden="true"></i>Fluxo de dados</span><span><i class="motion-path" aria-hidden="true"></i>Trajetórias</span><span><i class="candidate-site" aria-hidden="true"></i>Posições candidatas</span></div><span class="network-caption">Cenário conceitual · sensores móveis e infraestrutura fixa</span></figcaption>
+        </figure>
+      </div>`,
+      notes: 'Tempo: 70 segundos. Apresente o problema de forma genérica: sensores transportados por robôs, veículos ou pessoas precisam enviar dados a um sink. Na ilustração, destaque os móveis em âmbar, os nós fixos em verde-azulado, as posições candidatas vazias e o sink azul-escuro. As linhas contínuas representam o encaminhamento de dados; as tracejadas representam trajetórias. O alcance limitado exige retransmissão entre nós. Os móveis mudam de posição, mas a infraestrutura instalada permanece. A decisão é selecionar posições de instalação que permitam atender a demanda, com capacidade suficiente, nos períodos discretizados das trajetórias conhecidas. A imagem é uma ilustração conceitual gerada por IA; não representa uma implantação real nem evidência experimental. Os resultados apresentados adiante continuam referentes à instância geométrica controlada do artigo.'
     },
     {
       title: 'Definição do problema', section: 'Problema', className: 'compact',

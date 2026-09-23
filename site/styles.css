@@ -352,8 +352,77 @@ nav kbd {
   height:435px;
 }
 
-.figure.agriculture {
-  height:408px;
+.problem-layout {
+  grid-template-columns:0.85fr 1.4fr;
+  gap:26px;
+}
+
+.problem-copy {
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.problem-copy>p {
+  margin-bottom:0;
+}
+
+.problem-copy .callout p {
+  font-size:23px;
+}
+
+.figure.mobile-network {
+  height:478px;
+}
+
+.mobile-network img {
+  width:100%;
+  height:410px;
+  flex-shrink:0;
+}
+
+.mobile-network figcaption {
+  text-align:center;
+}
+
+.network-key {
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  font-size:15px;
+}
+
+.network-key span {
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.network-key i {
+  display:inline-block;
+  flex-shrink:0;
+}
+
+.network-key .data-link {
+  width:22px;
+  border-top:3px solid var(--teal);
+}
+
+.network-key .motion-path {
+  width:22px;
+  border-top:3px dashed #d78b0c;
+}
+
+.network-key .candidate-site {
+  width:13px;
+  height:13px;
+  border:2px solid #89959b;
+}
+
+.network-caption {
+  display:block;
+  margin-top:12px;
+  font-size:14px;
 }
 
 .pareto-crop {
