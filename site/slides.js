@@ -46,7 +46,7 @@ window.SLIDES = (() => {
     },
     {
       title: 'Definição do problema', section: 'Problema', className: 'compact',
-      content: html`<div class="callout"><h3>Dados do problema</h3><p>Região \(\Omega\subset\mathbb{R}^2\), sink \(\sigma\in\mathbb{R}^2\) indexado por \(s\), posições candidatas \(Q=\{q_j\mid j\in\mathcal J\}\) e dispositivos móveis com trajetórias conhecidas \(\gamma_m:[0,H]\to\Omega\), \(m\in\mathcal M\).</p></div><p>O horizonte é discretizado em períodos \(t\in\mathcal T\). Em cada período:</p><div class="equation">\[G_t=(V,E_t),\qquad V=\{s\}\cup\mathcal J\cup\mathcal M\]\[E_t=\big\{(i,j)\in V\times V:0&lt;d_{ij}(t)\le R_{\mathrm{com}}\big\}.\]</div><div class="callout blue"><p>Selecionar \(P\subseteq Q\) para que, em cada período, a demanda dos móveis chegue ao sink por caminhos com capacidade suficiente.</p></div>`
+      content: html`<div class="callout"><h3>Dados do problema</h3><p>Região \(\Omega\subset\mathbb{R}^2\), raio de comunicação \(R_{\text{com}}\), sink \(\sigma\in\mathbb{R}^2\) indexado por \(s\), posições candidatas \(Q=\{q_j\in\Omega\mid j\in\mathcal J\}\) e dispositivos móveis com trajetórias conhecidas \(\gamma_m:[0,H]\to\Omega\), \(m\in\mathcal M\).</p></div><p>O horizonte é discretizado em períodos \(t\in\mathcal T\). Em cada período:</p><div class="equation">\[G_t=(V,E_t),\qquad V=\{s\}\cup\mathcal J\cup\mathcal M\]\[E_t=\big\{(i,j)\in V\times V:0&lt;d_{ij}(t)\le R_{\mathrm{com}}\big\}.\]</div><div class="callout blue"><p>Selecionar \(P\subseteq Q\) para que, em cada período, a demanda dos móveis chegue ao sink por caminhos com capacidade suficiente.</p></div>`
     },
     section('03', 'Modelo MILP', 'Instalar nós, habilitar enlaces e encaminhar dados.'),
     {
