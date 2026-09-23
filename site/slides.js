@@ -91,7 +91,7 @@ window.SLIDES = (() => {
     section('06', 'Considerações finais', 'O planejamento gera instalações; a simulação avalia seu desempenho.'),
     {
       title: 'Considerações finais', section: 'Conclusões',
-      content: html`<ul><li>O MILP integra <strong>instalação de nós fixos, habilitação de enlaces e roteamento</strong> ao longo de trajetórias discretizadas.</li><li>A viabilidade estrutural não determina, isoladamente, <strong>latência, energia e entrega de dados</strong> na simulação.</li><li>Avaliação preliminar: <strong>uma instância e 26 topologias simuladas</strong>, sem comparação operacional com os baselines.</li></ul><div class="callout" style="margin-top:auto"><h3>Trabalhos futuros</h3><p>Ampliar as instâncias, estender o modelo e explorar a otimização multiobjetivo, utilizando-o também como mecanismo de verificação de viabilidade integrado ao NSGA.</p></div>`
+      content: html`<ul><li>O MILP integra instalação, conectividade e roteamento ao longo da mobilidade.</li><li>Os resultados mostram que soluções estruturalmente viáveis podem apresentar desempenhos operacionais distintos. Portanto, planejamento matemático e simulação são complementares.</li></ul><div class="callout" style="margin-top:auto"><h3>Trabalhos futuros</h3><p>Ampliar as instâncias, estender o modelo e explorar a otimização multiobjetivo, utilizando-o também como mecanismo de verificação de viabilidade integrado ao NSGA.</p></div>`
     },
     {
       title: 'Obrigado!', section: 'Encerramento', className: 'closing',
