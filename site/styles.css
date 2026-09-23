@@ -905,18 +905,6 @@ dialog::backdrop {
   line-height:1;
 }
 
-.notes-warning {
-  font-size:14px;
-  color:var(--muted);
-  border-bottom:1px solid var(--line);
-  padding-bottom:18px;
-}
-
-#notes-text {
-  font-size:20px;
-  line-height:1.65;
-}
-
 #overview-list {
   display:grid;
   grid-template-columns:1fr 1fr;

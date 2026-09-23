@@ -13,7 +13,7 @@ if (!Array.isArray(slides) || !slides.length) throw new Error('Nenhum slide enco
 let equations = 0;
 const assets = new Set();
 for (const [index, slide] of slides.entries()) {
-  if (!slide.title || !slide.section || !slide.content || !slide.notes) throw new Error(`Slide ${index + 1} incompleto.`);
+  if (!slide.title || !slide.section || !slide.content) throw new Error(`Slide ${index + 1} incompleto.`);
   for (const match of slide.content.matchAll(/\\\(([\s\S]*?)\\\)|\\\[([\s\S]*?)\\\]/g)) {
     const expression = (match[1] ?? match[2]).replaceAll('&lt;', '<').replaceAll('&gt;', '>').replaceAll('&amp;', '&');
     katex.renderToString(expression, { throwOnError: true, displayMode: match[2] !== undefined, trust: false });

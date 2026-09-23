@@ -116,8 +116,6 @@
     $('#progress').setAttribute('aria-valuemax', slides.length);
     $('#progress').setAttribute('aria-valuenow', current + 1);
     $('#progress span').style.width = `${((current + 1) / slides.length) * 100}%`;
-    $('#notes-slide-title').textContent = `${current + 1}. ${slides[current].title}`;
-    $('#notes-text').textContent = slides[current].notes;
     document.title = `${slides[current].title} · SBPO 2026`;
     resetMedia(elements[current]);
     if (!reducedMotion.matches) playMedia(elements[current]);
@@ -187,7 +185,7 @@
       ' ': () => goTo(current + (event.shiftKey ? -1 : 1)),
       arrowleft: () => goTo(current - 1), arrowup: () => goTo(current - 1), pageup: () => goTo(current - 1),
       home: () => goTo(0), end: () => goTo(slides.length - 1),
-      f: toggleFullscreen, o: () => openDialog('#overview-dialog'), n: () => openDialog('#notes-dialog'),
+      f: toggleFullscreen, o: () => openDialog('#overview-dialog'),
       '?': () => openDialog('#help-dialog')
     };
     if (actions[key]) { event.preventDefault(); actions[key](); }
